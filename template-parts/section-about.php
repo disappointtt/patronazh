@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -12,6 +12,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/icon-cert.png' ) ); ?>" alt="Сертифицированный персонал" loading="lazy">
 				<h3>Опыт и допуски</h3>
 				<p>В патронажной службе весь медперсонал с сертификатами, допуском и многолетним опытом работы по уходу за престарелыми и немощными людьми.</p>
+				<div class="certificates">
+					<h4 class="certificates__title">О сотрудниках и руководителе</h4>
+					<details class="certificates__details">
+						<summary class="certificates__summary">Показать сертификаты</summary>
+						<div class="certificates__strip">
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102805.jpg' ) ); ?>" target="_blank" rel="noopener">
+								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102805.jpg' ) ); ?>" alt="Сертификат 1" loading="lazy">
+							</a>
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102821.jpg' ) ); ?>" target="_blank" rel="noopener">
+								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102821.jpg' ) ); ?>" alt="Сертификат 2" loading="lazy">
+							</a>
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102842.jpg' ) ); ?>" target="_blank" rel="noopener">
+								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102842.jpg' ) ); ?>" alt="Сертификат 3" loading="lazy">
+							</a>
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102851.jpg' ) ); ?>" target="_blank" rel="noopener">
+								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102851.jpg' ) ); ?>" alt="Сертификат 4" loading="lazy">
+							</a>
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_103148.jpg' ) ); ?>" target="_blank" rel="noopener">
+								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_103148.jpg' ) ); ?>" alt="Сертификат 5" loading="lazy">
+							</a>
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_103156.jpg' ) ); ?>" target="_blank" rel="noopener">
+								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_103156.jpg' ) ); ?>" alt="Сертификат 6" loading="lazy">
+							</a>
+						</div>
+					</details>
+				</div>
 			</article>
 			<article class="feature-card">
 				<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/icon-quality.png' ) ); ?>" alt="Качество услуг" loading="lazy">

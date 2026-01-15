@@ -97,6 +97,13 @@ a:hover {
   min-width: 180px;
 }
 
+.btn__icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 .btn--primary {
   background: var(--color-primary);
   color: var(--color-white);
@@ -158,14 +165,13 @@ a:hover {
 
 .site-header__logo img,
 .site-footer__brand img {
-  width: 120px;
-  height: auto;
+  height: 48px;
+  width: auto;
+  max-width: 180px;
 }
 
 .site-header__title {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: none;
 }
 
 .site-header__name {
@@ -184,6 +190,23 @@ a:hover {
   margin: 0;
   padding: 0;
   font-weight: 600;
+}
+
+.main-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav__list a {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 4px;
+}
+
+.main-nav__list .current-menu-item > a,
+.main-nav__list .current_page_item > a {
+  color: var(--color-primary);
 }
 
 .menu-toggle {
@@ -612,5 +635,10 @@ a:hover {
 
   .site-header__inner .btn--outline {
     display: none;
+  }
+
+  .site-header__logo img,
+  .site-footer__brand img {
+    height: 42px;
   }
 }

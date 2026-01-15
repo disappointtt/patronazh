@@ -25,7 +25,7 @@ $notice = isset( $_GET['request'] ) ? sanitize_text_field( wp_unslash( $_GET['re
 		</div>
 		<?php if ( patronazh_forms_enabled() ) : ?>
 			<div class="contact-block__form">
-				<h3>Оставить заявку</h3>
+				<h3>Связаться</h3>
 				<?php if ( 'success' === $notice ) : ?>
 					<div class="notice notice--success">Спасибо! Мы свяжемся с вами в ближайшее время.</div>
 				<?php elseif ( 'error' === $notice ) : ?>

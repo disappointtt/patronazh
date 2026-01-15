@@ -22,6 +22,104 @@ function patronazh_setup() {
 }
 add_action( 'after_setup_theme', 'patronazh_setup' );
 
+function patronazh_get_page_link_by_slug( $slug, $fallback ) {
+	$page = get_page_by_path( $slug );
+	if ( $page ) {
+		return get_permalink( $page );
+	}
+
+	return $fallback;
+}
+
+function patronazh_primary_menu_fallback() {
+	$items = array(
+		array(
+			'label' => 'Главная',
+			'url' => home_url( '/' ),
+			'is_current' => is_front_page(),
+		),
+		array(
+			'label' => 'Услуги',
+			'url' => patronazh_get_page_link_by_slug( 'services', home_url( '/services/' ) ),
+			'is_current' => is_page( 'services' ),
+		),
+		array(
+			'label' => 'О нас',
+			'url' => patronazh_get_page_link_by_slug( 'about', home_url( '/about/' ) ),
+			'is_current' => is_page( 'about' ),
+		),
+		array(
+			'label' => 'Контакты',
+			'url' => patronazh_get_page_link_by_slug( 'contacts', home_url( '/contacts/' ) ),
+			'is_current' => is_page( 'contacts' ),
+		),
+	);
+
+	echo '<ul class="main-nav__list">';
+	foreach ( $items as $item ) {
+		$class = 'menu-item';
+		if ( $item['is_current'] ) {
+			$class .= ' current-menu-item';
+		}
+		printf(
+			'<li class="%1$s"><a href="%2$s">%3$s</a></li>',
+			esc_attr( $class ),
+			esc_url( $item['url'] ),
+			esc_html( $item['label'] )
+		);
+	}
+	echo '</ul>';
+}
+
+function patronazh_ensure_core_pages() {
+	$pages = array(
+		'services' => array(
+			'title' => 'Услуги',
+		),
+		'about' => array(
+			'title' => 'О нас',
+		),
+		'contacts' => array(
+			'title' => 'Контакты',
+		),
+	);
+
+	$created = false;
+	foreach ( $pages as $slug => $data ) {
+		if ( get_page_by_path( $slug ) ) {
+			continue;
+		}
+
+		$page_id = wp_insert_post(
+			array(
+				'post_title' => $data['title'],
+				'post_name' => $slug,
+				'post_status' => 'publish',
+				'post_type' => 'page',
+			)
+		);
+
+		if ( $page_id && ! is_wp_error( $page_id ) ) {
+			$created = true;
+		}
+	}
+
+	if ( $created ) {
+		flush_rewrite_rules();
+	}
+}
+
+function patronazh_maybe_create_core_pages() {
+	if ( get_option( 'patronazh_core_pages_created' ) ) {
+		return;
+	}
+
+	patronazh_ensure_core_pages();
+	update_option( 'patronazh_core_pages_created', 1 );
+}
+add_action( 'after_switch_theme', 'patronazh_maybe_create_core_pages' );
+add_action( 'init', 'patronazh_maybe_create_core_pages' );
+
 function patronazh_enqueue_assets() {
 	wp_enqueue_style(
 		'patronazh-fonts',
@@ -384,9 +482,9 @@ function patronazh_render_request_form() {
 			<input type="checkbox" name="patronazh_consent" required />
 			<span>Согласен(на) на обработку персональных данных</span>
 		</label>
-		<?php wp_nonce_field( 'patronazh_request', 'patronazh_nonce' ); ?>
-		<button class="btn btn--primary" type="submit">Оставить заявку</button>
-	</form>
+	<?php wp_nonce_field( 'patronazh_request', 'patronazh_nonce' ); ?>
+	<button class="btn btn--primary" type="submit">Связаться</button>
+</form>
 	<?php
 	return ob_get_clean();
 }

@@ -43,7 +43,7 @@ $phone_href = preg_replace( '/\s+/', '', $primary_phone );
 					'theme_location' => 'primary',
 					'container' => false,
 					'menu_class' => 'main-nav__list',
-					'fallback_cb' => false,
+					'fallback_cb' => 'patronazh_primary_menu_fallback',
 				)
 			);
 			?>

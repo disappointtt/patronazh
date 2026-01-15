@@ -29,8 +29,7 @@ services:
       - "8080:80"
     volumes:
       - wp_data:/var/www/html
-      # ВАЖНО: сюда подключим твою тему (см. шаг 4)
-      - ./theme:/var/www/html/wp-content/themes/patronazh-theme
+      - ../patronazh-theme:/var/www/html/wp-content/themes/patronazh-theme
 
 volumes:
   db_data:

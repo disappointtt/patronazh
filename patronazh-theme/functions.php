@@ -341,63 +341,6 @@ function patronazh_validate_honeypot_and_time( $form_type ) {
 	return true;
 }
 
-function patronazh_handle_request_form() {
-	if ( ! isset( $_POST['patronazh_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['patronazh_nonce'] ) ), 'patronazh_request' ) ) {
-		wp_safe_redirect( add_query_arg( 'request', 'invalid', wp_get_referer() ) );
-		exit;
-	}
-
-	if ( ! patronazh_validate_honeypot_and_time( 'request' ) ) {
-		wp_safe_redirect( add_query_arg( 'request', 'invalid', wp_get_referer() ) );
-		exit;
-	}
-
-	$ip = patronazh_get_client_ip();
-	$rate_key = 'patronazh_rl_request_' . md5( $ip );
-	if ( patronazh_check_rate_limit( $rate_key, 3, 10 * MINUTE_IN_SECONDS ) ) {
-		wp_safe_redirect( add_query_arg( 'request', 'limit', wp_get_referer() ) );
-		exit;
-	}
-
-	$name = isset( $_POST['patronazh_name'] ) ? sanitize_text_field( wp_unslash( $_POST['patronazh_name'] ) ) : '';
-	$phone = isset( $_POST['patronazh_phone'] ) ? sanitize_text_field( wp_unslash( $_POST['patronazh_phone'] ) ) : '';
-	$comment = isset( $_POST['patronazh_comment'] ) ? sanitize_textarea_field( wp_unslash( $_POST['patronazh_comment'] ) ) : '';
-	$consent = isset( $_POST['patronazh_consent'] ) ? 'yes' : 'no';
-
-	if ( '' === $name || '' === $phone || 'yes' !== $consent ) {
-		wp_safe_redirect( add_query_arg( 'request', 'error', wp_get_referer() ) );
-		exit;
-	}
-
-	$request_id = wp_insert_post(
-		array(
-			'post_type' => 'request',
-			'post_status' => 'private',
-			'post_title' => sprintf( 'Заявка: %s (%s)', $name, $phone ),
-			'post_content' => $comment,
-		)
-	);
-
-	if ( $request_id ) {
-		update_post_meta( $request_id, 'request_name', $name );
-		update_post_meta( $request_id, 'request_phone', $phone );
-		update_post_meta( $request_id, 'request_consent', $consent );
-		update_post_meta( $request_id, 'request_ip', $ip );
-		update_post_meta( $request_id, 'request_user_agent', isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '' );
-	}
-
-	$admin_email = get_option( 'admin_email' );
-	$subject = 'Новая заявка с сайта patronazh.kz';
-	$message = "Имя: {$name}\nТелефон: {$phone}\nКомментарий: {$comment}";
-	$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
-	wp_mail( $admin_email, $subject, $message, $headers );
-
-	wp_safe_redirect( add_query_arg( 'request', 'success', wp_get_referer() ) );
-	exit;
-}
-add_action( 'admin_post_nopriv_patronazh_request', 'patronazh_handle_request_form' );
-add_action( 'admin_post_patronazh_request', 'patronazh_handle_request_form' );
-
 function patronazh_handle_review_form() {
 	if ( ! isset( $_POST['patronazh_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['patronazh_nonce'] ) ), 'patronazh_review' ) ) {
 		wp_safe_redirect( add_query_arg( 'review', 'invalid', wp_get_referer() ) );

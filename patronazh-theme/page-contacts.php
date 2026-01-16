@@ -28,7 +28,7 @@ $notice = isset( $_GET['request'] ) ? sanitize_text_field( wp_unslash( $_GET['re
 		</div>
 		<div class="contact-card">
 			<h2>Телеграм</h2>
-			<a class="contact-link contact-link--tg" href="https://t.me/77775700947" target="_blank" rel="noopener noreferrer">
+			<a class="contact-link contact-link--tg" href="https://t.me/EurasiaMed" target="_blank" rel="noopener noreferrer">
 				<svg class="contact-link__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 					<path d="M21.5 3.6c.4-.2.8.2.7.6l-3.4 16.1c-.1.5-.7.7-1.1.4l-4.8-3.5-2.3 2.2c-.3.3-.8.2-.9-.2l-1.5-5.6L3.2 11c-.5-.2-.5-.9.1-1.1L21.5 3.6zM9.6 13.7l1.2 4.3.2-2.1 7.1-8.1-8.5 5.9z"/>
 				</svg>

@@ -412,6 +412,37 @@ a:hover {
   margin: 0;
 }
 
+.service-card--full {
+  padding: 28px;
+}
+
+.service-groups {
+  display: grid;
+  gap: 24px;
+}
+
+.service-group h3 {
+  margin-bottom: 12px;
+}
+
+.service-group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-group li {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(214, 226, 220, 0.6);
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.service-group li + li {
+  margin-top: 10px;
+}
+
 .pricing-highlights {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-bottom: 28px;

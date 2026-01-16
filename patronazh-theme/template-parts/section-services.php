@@ -43,6 +43,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</ul>
 			</div>
 		</div>
-		<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Все услуги</a>
+		<?php
+		$services_page = get_page_by_title( 'Услуги' );
+		$services_link = $services_page ? get_permalink( $services_page ) : home_url( '/services/' );
+		?>
+		<a class="btn btn--outline" href="<?php echo esc_url( $services_link ); ?>">Все услуги</a>
 	</div>
 </section>

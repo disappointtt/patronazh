@@ -211,6 +211,7 @@ function patronazh_get_contact_info() {
 		'phones' => array(
 			'+7 777 570 09 47',
 			'+7 708 436 96 60',
+			'+7 7212-36 96 60',
 		),
 		'email' => 'svetik_76s@mail.ru',
 		'address' => 'Город Караганда, Бухар Жырау 33',

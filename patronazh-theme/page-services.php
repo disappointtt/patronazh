@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 get_header();
 ?>
-<section class="section section--page">
+<section class="section section--page section--page-centered">
 	<div class="container">
 		<h1 class="page-title">Услуги</h1>
 		<p class="section-lead">Мы помогаем пожилым людям и людям с инвалидностью как на дому, так и в стационаре. Подбор графика и формата ухода - индивидуально.</p>

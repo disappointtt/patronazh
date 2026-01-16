@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 get_header();
 ?>
-<section class="section section--page">
+<section class="section section--page section--page-centered">
 	<div class="container">
 		<h1 class="page-title">О нас</h1>
 		<div class="content">
@@ -17,8 +17,15 @@ get_header();
 
 <section class="section section--light">
 	<div class="container">
+		<h2 class="section-title">Основополагающими принципами нашей работы являются:</h2>
+		<p class="section-lead">Уважение к пожилому человеку; принятие его характерологических особенностей, эмпатичное отношение к переменам настроения, раздражительности и проявлениям недовольства и привычек.</p>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
 		<h2 class="section-title">Персонал</h2>
-		<p class="section-lead">Сиделка — непростая профессия, в ней приживаются только те, кто обладает не только образованием, но и особыми личными качествами — терпением, трудолюбием, чувством юмора, состраданием и искренностью. Данное сочетание — редкость, а мы с гордостью и со всей ответственностью можем заявить, что таковыми качествами обладает каждая наша сиделка!</p>
+		<p class="section-lead">Сиделка - непростая профессия, в ней приживаются только те, кто обладает не только образованием, но и особыми личными качествами - терпением, трудолюбием, чувством юмора, состраданием и искренностью. Данное сочетание - редкость, а мы с гордостью и со всей ответственностью можем заявить, что таковыми качествами обладает каждая наша сиделка!</p>
 		<div class="staff-grid">
 			<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/staff-1.jpg' ) ); ?>" alt="Сотрудник патронажной службы">
 			<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/staff-2.jpg' ) ); ?>" alt="Сотрудник патронажной службы">

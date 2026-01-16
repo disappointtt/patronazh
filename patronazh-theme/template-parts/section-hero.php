@@ -8,7 +8,7 @@ $primary_phone = isset( $contact['phones'][0] ) ? $contact['phones'][0] : '';
 <section class="section hero">
 	<div class="container hero__inner">
 		<div class="hero__content">
-			<p class="hero__eyebrow">Евразия Мед</p>
+			<p class="hero__eyebrow">Патронажная служба г.Караганда</p>
 			<h1>Профессиональный уход на дому и в стационаре</h1>
 			<p class="hero__lead">Помощь пожилым людям и людям с инвалидностью. Подбираем график и формат ухода с учетом состояния и пожеланий семьи.</p>
 			<div class="hero__actions">

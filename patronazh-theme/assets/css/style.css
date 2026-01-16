@@ -308,6 +308,48 @@ body.admin-bar .site-header {
   gap: 24px;
 }
 
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: var(--color-secondary);
+  border: 1px solid rgba(214, 226, 220, 0.6);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.contact-link__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.contact-link--tg {
+  background: #e6f4ff;
+  border-color: #b8dcff;
+  color: #1a73b8;
+}
+
+.contact-link--ig {
+  background: #fff1f7;
+  border-color: #f7c9dd;
+  color: #b8326a;
+}
+
+.contact-link--wa {
+  background: #e9f9ef;
+  border-color: #c1efcf;
+  color: #1f8f57;
+}
+
+.contact-link--gis {
+  background: #edf3ff;
+  border-color: #c7d8ff;
+  color: #3159c7;
+}
+
 .feature-grid {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }

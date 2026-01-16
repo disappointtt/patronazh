@@ -23,20 +23,5 @@ $notice = isset( $_GET['request'] ) ? sanitize_text_field( wp_unslash( $_GET['re
 			<?php endif; ?>
 			<p><?php echo esc_html( $contact['work_hours'] ); ?></p>
 		</div>
-		<?php if ( patronazh_forms_enabled() ) : ?>
-			<div class="contact-block__form">
-				<h3>Связаться</h3>
-				<?php if ( 'success' === $notice ) : ?>
-					<div class="notice notice--success">Спасибо! Мы свяжемся с вами в ближайшее время.</div>
-				<?php elseif ( 'error' === $notice ) : ?>
-					<div class="notice notice--error">Пожалуйста, заполните все обязательные поля.</div>
-				<?php elseif ( 'limit' === $notice ) : ?>
-					<div class="notice notice--error">Слишком много отправок. Попробуйте позже.</div>
-				<?php elseif ( 'invalid' === $notice ) : ?>
-					<div class="notice notice--error">Не удалось отправить заявку. Попробуйте еще раз.</div>
-				<?php endif; ?>
-				<?php echo patronazh_render_request_form(); ?>
-			</div>
-		<?php endif; ?>
 	</div>
 </section>

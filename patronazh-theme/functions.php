@@ -209,12 +209,12 @@ add_action( 'init', 'patronazh_register_cpts' );
 function patronazh_get_contact_info() {
 	$info = array(
 		'phones' => array(
-			'+7 777 570 0947',
-			'+7 775 146 3680',
+			'+7 777 570 09 47',
+			'+7 708 436 96 60',
 		),
-		'email' => 'karaganda-14@list.ru',
-		'address' => 'Город Караганда, 19 мкр.',
-		'work_hours' => 'Ежедневно, 09:00–20:00',
+		'email' => 'svetik_76s@mail.ru',
+		'address' => 'Город Караганда, Бухар Жырау 33',
+		'work_hours' => 'Ежедневно, 09:00-20:00',
 	);
 
 	return apply_filters( 'patronazh_contact_info', $info );

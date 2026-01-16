@@ -7,7 +7,7 @@ get_header();
 <section class="section section--page">
 	<div class="container">
 		<h1 class="page-title">Цены</h1>
-		<p class="price-note">От 240 тенге.</p>
+		<p class="price-note">От 1450 тенге в час.</p>
 		<h2 class="section-title">Из чего складывается цена за услуги сиделки?</h2>
 		<p>Стоимость услуг сиделки зависит:</p>
 	</div>

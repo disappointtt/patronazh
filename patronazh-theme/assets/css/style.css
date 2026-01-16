@@ -141,12 +141,21 @@ a:hover {
 }
 
 .site-header {
-  background: rgba(248, 251, 249, 0.9);
-  backdrop-filter: blur(8px);
+  background: #f8fbf9;
   position: sticky;
   top: 0;
   z-index: 999;
   border-bottom: 1px solid var(--color-border);
+}
+
+body.admin-bar .site-header {
+  top: 32px;
+}
+
+@media (max-width: 782px) {
+  body.admin-bar .site-header {
+    top: 46px;
+  }
 }
 
 .site-header__inner {

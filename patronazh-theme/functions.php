@@ -128,18 +128,23 @@ function patronazh_enqueue_assets() {
 		null
 	);
 
+	$style_path = get_theme_file_path( '/assets/css/style.css' );
+	$script_path = get_theme_file_path( '/assets/js/main.js' );
+	$style_version = file_exists( $style_path ) ? filemtime( $style_path ) : PATRONAZH_THEME_VERSION;
+	$script_version = file_exists( $script_path ) ? filemtime( $script_path ) : PATRONAZH_THEME_VERSION;
+
 	wp_enqueue_style(
 		'patronazh-style',
 		get_theme_file_uri( '/assets/css/style.css' ),
 		array( 'patronazh-fonts' ),
-		PATRONAZH_THEME_VERSION
+		$style_version
 	);
 
 	wp_enqueue_script(
 		'patronazh-main',
 		get_theme_file_uri( '/assets/js/main.js' ),
 		array(),
-		PATRONAZH_THEME_VERSION,
+		$script_version,
 		true
 	);
 

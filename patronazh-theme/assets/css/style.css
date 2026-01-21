@@ -448,6 +448,70 @@ body.admin-bar .site-header {
   transform: scale(1.6);
 }
 
+.certificate-viewer {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.certificate-viewer.is-open {
+  display: flex;
+}
+
+.certificate-viewer__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.certificate-viewer__content {
+  position: relative;
+  z-index: 1;
+  width: 92vw;
+  max-width: 960px;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 52px 20px 20px;
+}
+
+.certificate-viewer__image {
+  max-width: 100%;
+  max-height: 82vh;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  background: var(--color-white);
+}
+
+.certificate-viewer__close {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.certificate-viewer-open {
+  overflow: hidden;
+}
+
 @media (max-width: 640px) {
   .certificates__item {
     width: 96px;
@@ -455,6 +519,16 @@ body.admin-bar .site-header {
 
   .certificates__item:hover img {
     transform: scale(1.35);
+  }
+
+  .certificate-viewer__content {
+    width: 94vw;
+    max-height: 94vh;
+    padding: 46px 10px 12px;
+  }
+
+  .certificate-viewer__image {
+    max-height: 78vh;
   }
 }
 

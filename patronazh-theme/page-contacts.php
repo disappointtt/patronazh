@@ -28,6 +28,7 @@ $notice = isset( $_GET['request'] ) ? sanitize_text_field( wp_unslash( $_GET['re
 		</div>
 		<div class="contact-card">
 			<h2>Телеграм</h2>
+			<p>Быстрая консультация в Telegram: условия, стоимость, подбор специалиста.</p>
 			<a class="contact-link contact-link--tg" href="https://t.me/EurasiaMed" target="_blank" rel="noopener noreferrer">
 				<svg class="contact-link__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 					<path d="M21.5 3.6c.4-.2.8.2.7.6l-3.4 16.1c-.1.5-.7.7-1.1.4l-4.8-3.5-2.3 2.2c-.3.3-.8.2-.9-.2l-1.5-5.6L3.2 11c-.5-.2-.5-.9.1-1.1L21.5 3.6zM9.6 13.7l1.2 4.3.2-2.1 7.1-8.1-8.5 5.9z"/>
@@ -37,6 +38,7 @@ $notice = isset( $_GET['request'] ) ? sanitize_text_field( wp_unslash( $_GET['re
 		</div>
 		<div class="contact-card">
 			<h2>Инстаграм</h2>
+			<p>Наша работа и отзывы в Instagram.</p>
 			<a class="contact-link contact-link--ig" href="https://www.instagram.com/eurasia_med/" target="_blank" rel="noopener noreferrer">
 				<svg class="contact-link__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 					<path d="M16.8 3H7.2A4.2 4.2 0 0 0 3 7.2v9.6A4.2 4.2 0 0 0 7.2 21h9.6a4.2 4.2 0 0 0 4.2-4.2V7.2A4.2 4.2 0 0 0 16.8 3zm2.2 13.8a2.2 2.2 0 0 1-2.2 2.2H7.2A2.2 2.2 0 0 1 5 16.8V7.2A2.2 2.2 0 0 1 7.2 5h9.6A2.2 2.2 0 0 1 19 7.2v9.6z"/>
@@ -48,6 +50,7 @@ $notice = isset( $_GET['request'] ) ? sanitize_text_field( wp_unslash( $_GET['re
 		</div>
 		<div class="contact-card">
 			<h2>Ватсап</h2>
+			<p>Удобная связь в WhatsApp — ответим и поможем с организацией ухода.</p>
 			<a class="contact-link contact-link--wa" href="https://wa.me/87084369660" target="_blank" rel="noopener noreferrer">
 				<svg class="contact-link__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 					<path d="M12 4.1a7.9 7.9 0 0 0-6.8 11.9L4 20l4.1-1.1A7.9 7.9 0 1 0 12 4.1zm0 14.1a6.2 6.2 0 0 1-3.1-.8l-.2-.1-2.4.6.6-2.3-.1-.2A6.2 6.2 0 1 1 12 18.2zm3.5-4.4c-.2-.1-1.1-.6-1.3-.7-.2-.1-.3-.1-.4.1l-.6.7c-.1.1-.2.2-.4.1-.2-.1-.8-.3-1.5-.9-.6-.5-.9-1.1-1-1.3-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3.1-.1 0-.2 0-.3l-.6-1.4c-.2-.4-.3-.3-.4-.3h-.3c-.1 0-.3 0-.5.2-.2.2-.6.6-.6 1.5 0 .9.7 1.8.8 1.9.1.1 1.4 2.1 3.3 2.9.5.2.9.3 1.2.4.5.1.9.1 1.2.1.4-.1 1.1-.5 1.3-.9.2-.4.2-.8.2-.9 0-.1-.2-.2-.4-.3z"/>
@@ -57,6 +60,7 @@ $notice = isset( $_GET['request'] ) ? sanitize_text_field( wp_unslash( $_GET['re
 		</div>
 		<div class="contact-card">
 			<h2>2ГИС</h2>
+			<p>В 2ГИС можно посмотреть оценки и отзывы клиентов, а также написать свой.</p>
 			<a class="contact-link contact-link--gis" href="https://2gis.kz/karaganda/geo/70000001022213916" target="_blank" rel="noopener noreferrer">
 				<svg class="contact-link__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 					<path d="M12 2a8.2 8.2 0 0 0-8.2 8.2c0 5.6 7 11.2 7.3 11.4.5.4 1.1.4 1.6 0 .3-.2 7.3-5.8 7.3-11.4A8.2 8.2 0 0 0 12 2zm0 11.5a3.3 3.3 0 1 1 0-6.6 3.3 3.3 0 0 1 0 6.6z"/>

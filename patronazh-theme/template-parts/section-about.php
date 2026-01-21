@@ -17,24 +17,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<details class="certificates__details">
 						<summary class="certificates__summary">Показать сертификаты</summary>
 						<div class="certificates__strip">
-							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102805.jpg' ) ); ?>" target="_blank" rel="noopener">
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102805.jpg' ) ); ?>">
 								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102805.jpg' ) ); ?>" alt="Сертификат 1" loading="lazy">
 							</a>
-							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102821.jpg' ) ); ?>" target="_blank" rel="noopener">
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102821.jpg' ) ); ?>">
 								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102821.jpg' ) ); ?>" alt="Сертификат 2" loading="lazy">
 							</a>
-							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102842.jpg' ) ); ?>" target="_blank" rel="noopener">
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102842.jpg' ) ); ?>">
 								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102842.jpg' ) ); ?>" alt="Сертификат 3" loading="lazy">
 							</a>
-							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102851.jpg' ) ); ?>" target="_blank" rel="noopener">
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102851.jpg' ) ); ?>">
 								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_102851.jpg' ) ); ?>" alt="Сертификат 4" loading="lazy">
 							</a>
-							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_103148.jpg' ) ); ?>" target="_blank" rel="noopener">
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_103148.jpg' ) ); ?>">
 								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_103148.jpg' ) ); ?>" alt="Сертификат 5" loading="lazy">
 							</a>
-							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_103156.jpg' ) ); ?>" target="_blank" rel="noopener">
+							<a class="certificates__item" href="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_103156.jpg' ) ); ?>">
 								<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/certificates/20160316_103156.jpg' ) ); ?>" alt="Сертификат 6" loading="lazy">
 							</a>
+						</div>
+						<div class="certificate-viewer" aria-hidden="true">
+							<div class="certificate-viewer__backdrop" data-action="close"></div>
+							<div class="certificate-viewer__content" role="dialog" aria-modal="true" aria-label="Сертификат">
+								<button class="certificate-viewer__close" type="button" data-action="close" aria-label="Назад">&larr;</button>
+								<img class="certificate-viewer__image" src="" alt="">
+							</div>
 						</div>
 					</details>
 				</div>
